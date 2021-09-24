@@ -39,7 +39,7 @@ y_train = (test_data - test_mean)/test_std
 # hyperparameters
 optimizer = 'rmsprop'
 loss_function = 'MeanSquaredError' 
-# loss_function="MeanAbsoluteError" 
+# loss_function = "MeanAbsoluteError" 
 learning_rate = 0.051
 numbers_epochs = 200
 model_type = 'linear'
