@@ -203,6 +203,14 @@ def minimizer(f, xi, algo = 'GD', LR = 0.01):
 # random initial guess for fitting parameters
 po = np.random.uniform(2, 1., size = NFIT)
 
+print(X[train_idx].shape)
+print(po)
+print(po.shape)
+print(X[train_idx].shape)
+print((po[1:].reshape(NFIT-1, 1)).shape)
+print((np.matmul(X[train_idx], po[1:].reshape(NFIT-1, 1))).shape)
+exit()
+
 # train the model using optimizer
 p_final = minimizer(loss, po)	
 print("OPTIMAL PARAM:", p_final)
