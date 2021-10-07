@@ -72,8 +72,7 @@ input_shape = (x_train.shape[1],)
 # BUILD & COMPILE MODEL
 def build_model():
 	model = models.Sequential()
-	model.add(layers.Dense(units = nodes, activation = act, 
-input_shape = input_shape))
+	model.add(layers.Dense(units = nodes, activation = act, input_shape = input_shape))
 	model.add(layers.Dense(units = nodes, activation = act))
 	model.add(layers.Dense(units = nodes, activation = act))
 	model.add(layers.Dense(1))
@@ -96,20 +95,14 @@ for i in range(k):
 	y_val = y_train[i*num_val_samples:(i + 1)*num_val_samples]
 
 	# concatenate the remaining input and output values from train to form the training set
-	rest_x_train = np.concatenate([x_train[:i*num_val_samples], 
-x_train[(i + 1)*num_val_samples:]], axis = 0)
-	rest_y_train = np.concatenate([y_train[:i*num_val_samples], 
-y_train[(i + 1)*num_val_samples:]], axis = 0)
+	rest_x_train = np.concatenate([x_train[:i*num_val_samples], x_train[(i + 1)*num_val_samples:]], axis = 0)
+	rest_y_train = np.concatenate([y_train[:i*num_val_samples], y_train[(i + 1)*num_val_samples:]], axis = 0)
 
 	# build and compile a model
 	model = build_model()
 
 	# fit the model onto the training set, validate the model with the validation set
-	history = model.fit(rest_x_train, 
-rest_y_train, 
-epochs=num_epochs, 
-batch_size=len(rest_x_train), 
-validation_data=(x_val, y_val), verbose=0)
+	history = model.fit(rest_x_train, rest_y_train, epochs=num_epochs, batch_size=len(rest_x_train), validation_data=(x_val, y_val), verbose=0)
 
 	# record mse and mae for train and val sets
 	train_mse = history.history['loss']
