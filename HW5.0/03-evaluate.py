@@ -220,17 +220,40 @@ b_size = 32                              # batch size
 # PARTITION DATA
 #---------------
 
+# specify fraction of data set to use for training
 f_train = 0.8
+
+# specify fraction of data set to use for validating
 f_val   = 0.15
+
+# shuffle the indices of the data set
 rand_indices = np.random.RandomState(seed=0).permutation(x_ohe.shape[0])
-CUT1 = int(f_train*x_ohe.shape[0]); 
+
+# specify the index where the training data ends
+CUT1 = int(f_train*x_ohe.shape[0]);
+
+# specify the index where the validation data will end
 CUT2 = int((f_train+f_val)*x_ohe.shape[0]);
+
+# use the cut to generate a random training index
 train_idx = rand_indices[:CUT1]
+
+# use the cut to generate a random validation index
 val_idx   = rand_indices[CUT1:CUT2]
+
+# use the cut to generate a random testing index
 test_idx  = rand_indices[CUT2:]
+
+# use the indices to create a random set of training data and labels
 x_train, y_train = x_ohe[train_idx, :], labels_array[train_idx]
+
+# use the indices to create a random set of validation data and labels
 x_val, y_val = x_ohe[val_idx, :], labels_array[val_idx]
+
+# use the indices to create a random set of testing data and labels
 x_test, y_test = x_ohe[test_idx, :], labels_array[test_idx]
+
+# print the partition information
 print('------PARTITION INFO---------')
 print("x_train shape:", x_train.shape)
 print("y_train shape:", y_train.shape)
