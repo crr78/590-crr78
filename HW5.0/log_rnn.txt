@@ -1,0 +1,7 @@
+-------Results-------
+The minimum training categorical cross-entropy is 1.02 and it occurs at epoch #19
+The minimum validation categorical cross-entropy is 1.0 and it occurs at epoch #4
+The maximum training accuracy is 51.04% and it occurs at epoch # 7.
+The maximum validation accuracy is 50.0% and it occurs at epoch # 1.
+The maximum training AUC is 0.6705 and it occurs at epoch # 19.
+The maximum validation AUC is 0.7415 and it occurs at epoch # 8.
