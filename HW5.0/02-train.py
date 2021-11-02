@@ -296,7 +296,7 @@ else:
 # specify fraction of data set to use for training
 f_train = 0.8
 
-# specify fraction of data set to use for testing
+# specify fraction of data set to use for validating
 f_val   = 0.15
 
 # shuffle the indices of the data set
