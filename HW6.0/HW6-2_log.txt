@@ -1,0 +1,20 @@
+-------Results-------
+
+-------Training & Validation Results-------
+The minimum training binary cross-entropy was 0.12 and it occurred at epoch # 40
+The minimum validation binary cross-entropy was 0.13 and it occurred at epoch # 40
+The maximum training accuracy was 81.02% and it occurred at epoch # 2
+The maximum validation accuracy was 80.44% and it occurred at epoch # 1
+
+-------Results Using Entire Training Set-------
+The binary cross-entropy of the model on the entire training set was 0.11
+The accuracy of the model on the entire training set was 80.98%
+
+-------Testing Results-------
+The binary cross-entropy of the model on the testing set was 0.11
+The accuracy of the model on the testing set was 81.89%
+
+-------Anomaly Detection Results-------
+The fraction of anomalies in the mnist training set was 0.0
+The fraction of anomalies in the fashion mnist training set was 0.6048
+
