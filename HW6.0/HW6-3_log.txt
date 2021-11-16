@@ -1,0 +1,20 @@
+-------Results-------
+
+-------Training & Validation Results-------
+The minimum training binary cross-entropy was 0.56 and it occurred at epoch # 99
+The minimum validation binary cross-entropy was 0.56 and it occurred at epoch # 98
+The maximum training accuracy was 76.51% and it occurred at epoch # 97
+The maximum validation accuracy was 77.76% and it occurred at epoch # 88
+
+-------Results Using Entire Training Set-------
+The binary cross-entropy of the model on the entire training set was 0.56
+The accuracy of the model on the entire training set was 78.04%
+
+-------Testing Results-------
+The binary cross-entropy of the model on the testing set was 0.56
+The accuracy of the model on the testing set was 78.39%
+
+-------Anomaly Detection Results-------
+The fraction of anomalies in the cifar10 training set was 0.0
+The fraction of anomalies in the cifar100 training set was 0.0
+
