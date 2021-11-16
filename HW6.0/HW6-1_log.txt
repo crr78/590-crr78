@@ -1,0 +1,20 @@
+-------Results-------
+
+-------Training & Validation Results-------
+The minimum training mean squared error was 0.03 and it occurred at epoch # 40
+The minimum validation mean squared error was 0.03 and it occurred at epoch # 34
+The maximum training accuracy was 1.65% and it occurred at epoch # 9
+The maximum validation accuracy was 1.68% and it occurred at epoch # 4
+
+-------Results Using Entire Training Set-------
+The mean squared error of the model on the entire training set was 0.03
+The accuracy of the model on the entire training set was 1.48%
+
+-------Testing Results-------
+The mean squared error of the model on the testing set was 0.03
+The accuracy of the model on the testing set was 1.59%
+
+-------Anomaly Detection Results-------
+The fraction of anomalies in the mnist training set was 0.0
+The fraction of anomalies in the fashion mnist training set was 0.1276
+
